@@ -20,16 +20,16 @@ print(welcome)
 
 # While loop until user inputs "Hourly" or "Salary"
 
-pay_type = ['Hourly', 'Salary']
+pay_type = ['H', 'S']
 
 user_schedule = None
 
 while user_schedule not in pay_type:
-    user_schedule = input('What is your pay type? Hourly or Salary: ').title().strip()
+    user_schedule = input('What is your pay type? (H)ourly or (S)alary: ').title().strip()
 
 # Asking user hourly rate or gross salary and pay frequency
 
-if user_schedule == 'Salary':
+if user_schedule == 'S':
 
     user_salary = float(input('Gross Annual Salary: $ ').strip().replace(',', ''))  # float
 
@@ -53,11 +53,9 @@ else:
 
 # Calculate weekly,bi-weekly,or monthly gross pay IF user_schedule == salary and user_tax_rate == Y
 
+# Calculate gross pay IF user_schedule == hourly and user_tax_rate == Y
+
 
 # Calculate weekly,bi-weekly,or monthly gross pay IF user_schedule == salary and user_tax_rate == N
 
-
-# Calculate weekly or bi-weekly gross pay IF user_schedule == hourly and user_tax_rate == Y
-
-
-# Calculate weekly or bi-weekly gross pay IF user_schedule == hourly and user_tax_rate == N
+# Calculate gross pay IF user_schedule == hourly and user_tax_rate == N
