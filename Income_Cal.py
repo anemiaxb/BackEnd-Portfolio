@@ -10,7 +10,7 @@ Rationale:
 
 Cal's intro.
 
-The user will answer questions pertaining to pay type. Including hourly rate, OT rate, and if they know their tax rate.
+The user will answer questions pertaining to pay type including pay schedule,hourly rate,gross salary,pay frequency,and tax rate.
 
 """
 
@@ -52,6 +52,12 @@ else:
     print('For me to figure out your tax rate, I will need information from your LAST paycheck.')
 
 # Calculate weekly,bi-weekly,or monthly gross pay IF user_schedule == salary and user_tax_rate == Y
+
+print("The results are based on information you have provided to me.")
+
+if user_salary_pay_frequency == 'W':
+    gross_salary = ((user_salary / 52) - ((user_salary / 52) * user_tax_rate)).__round__(2)
+print('Weekly Gross: ${}'.format(gross_salary))
 
 # Calculate gross pay IF user_schedule == hourly and user_tax_rate == Y
 
