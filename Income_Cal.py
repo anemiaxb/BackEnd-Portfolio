@@ -50,3 +50,14 @@ if user_tax == 'Y':
 else:
 
     print('For me to figure out your tax rate, I will need information from your LAST paycheck.')
+
+# Calculate weekly,bi-weekly,or monthly gross pay IF user_schedule == salary and user_tax_rate == Y
+
+
+# Calculate weekly,bi-weekly,or monthly gross pay IF user_schedule == salary and user_tax_rate == N
+
+
+# Calculate weekly or bi-weekly gross pay IF user_schedule == hourly and user_tax_rate == Y
+
+
+# Calculate weekly or bi-weekly gross pay IF user_schedule == hourly and user_tax_rate == N
