@@ -45,7 +45,8 @@ user_tax = input('Do you know what your tax rate is? Y or N: ').strip().upper()
 
 if user_tax == 'Y':
 
-    user_tax_rate = float(input('Tax rate: ').strip())
+    user_tax_rate_float = float(input('Tax rate: ').strip())
+    user_tax_rate_converted = (user_tax_rate_float / 100)
 
 else:
 
@@ -58,7 +59,7 @@ print("The results are based on information you have provided to me.")
 if user_salary_pay_frequency == 'W':
 
     weekly_gross = (user_salary / 52).__round__(2)
-    weekly_net = (weekly_gross - (weekly_gross * user_tax_rate)).__round__(2)
+    weekly_net = (weekly_gross - (weekly_gross * user_tax_rate_converted)).__round__(2)
 
     print('Weekly Gross: ${}'.format(weekly_gross))
     print('Weekly Net: ${}'.format(weekly_net))
@@ -66,12 +67,10 @@ if user_salary_pay_frequency == 'W':
 elif user_salary_pay_frequency == 'B':
 
     biWeekly_gross = (user_salary / 26).__round__(2)
-    biWeekly_net = (biWeekly_gross - (biWeekly_gross * user_tax_rate)).__round__(2)
+    biWeekly_net = (biWeekly_gross - (biWeekly_gross * user_tax_rate_converted)).__round__(2)
 
     print('Bi-Weekly Gross: ${}'.format(biWeekly_gross))
     print('Bi-Weekly Net: ${}'.format(biWeekly_net))
-
-
 
 # Calculate gross pay IF user_schedule == hourly and user_tax_rate == Y
 
