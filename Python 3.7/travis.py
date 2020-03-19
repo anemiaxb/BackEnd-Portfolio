@@ -1,3 +1,5 @@
+#Travis the Secuirty Bot
+
 #List of known users
 
 known_users = ["Alice", "Bob", "Claire", "Dan", "Emma", "Fred", "Georgie", "Harry"]
