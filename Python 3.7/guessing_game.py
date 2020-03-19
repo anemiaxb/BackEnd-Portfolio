@@ -11,4 +11,3 @@ while guess_count < guess_limit:
 else:
     print('Sorry, you failed!')
 
-print('-' * 40)
