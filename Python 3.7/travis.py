@@ -1,4 +1,4 @@
-#Travis the Secuirty Bot
+#Travis the Security Bot
 
 #List of known users
 
