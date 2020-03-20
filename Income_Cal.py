@@ -14,9 +14,7 @@ The user will answer questions pertaining to pay type including pay schedule,hou
 
 """
 
-welcome = "Welcome! My name is Cal and I will be helping you today. To get started, I need some information about your income."
-
-print(welcome)
+print("Welcome! My name is Cal and I will be helping you today. To get started, I need some information about your income.")
 
 pay_type = ['H', 'S']
 frequency = ['W', 'B', 'M']
@@ -27,11 +25,9 @@ user_pay_frequency = None
 user_tax_rate = None
 
 while user_pay_type not in pay_type or user_pay_frequency not in frequency or user_tax_rate not in tax_rate:
-
     user_pay_type = input('What is your pay type? (H)ourly or (S)alary: ').title().strip()
     user_pay_frequency = user_salary_pay_frequency = input('Are you paid (W)eekly, (B)i-weekly, or (M)onthly?: ').strip().title()
     user_tax_rate = input('Do you know what your tax rate is? Y or N: ').strip().upper()
-
 
 # #user_tax_rate_float = float(input('Tax rate: ').strip())
 # #user_tax_rate_converted = (user_tax_rate_float / 100)
