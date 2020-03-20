@@ -18,73 +18,60 @@ welcome = "Welcome! My name is Cal and I will be helping you today. To get start
 
 print(welcome)
 
-# While loop until user inputs "Hourly" or "Salary"
-
 pay_type = ['H', 'S']
+frequency = ['W', 'B', 'M']
+tax_rate = ['Y', 'N']
 
-user_schedule = None
+user_pay_type = None
+user_pay_frequency = None
+user_tax_rate = None
 
-while user_schedule not in pay_type:
-    user_schedule = input('What is your pay type? (H)ourly or (S)alary: ').title().strip()
+while user_pay_type not in pay_type or user_pay_frequency not in frequency or user_tax_rate not in tax_rate:
 
-# Asking user hourly rate or gross salary and pay frequency
-
-if user_schedule == 'S':
-
-    user_salary = float(input('Gross Annual Salary: $ ').strip().replace(',', ''))  # float
-
-    user_salary_pay_frequency = input('Are you paid (W)eekly, (B)i-weekly, or (M)onthly?: ').strip().title()
-
-else:
-
-    user_hourly_rate = float(input('What is your hourly rate?: $ ').strip())  # float
-
-# Asking user for tax rate, if not known, then will calculate using previous paycheck info
-
-user_tax = input('Do you know what your tax rate is? Y or N: ').strip().upper()
-
-if user_tax == 'Y':
-
-    user_tax_rate_float = float(input('Tax rate: ').strip())
-    user_tax_rate_converted = (user_tax_rate_float / 100)
-
-else:
-
-    print('For me to figure out your tax rate, I will need information from your LAST paycheck.')
-
-# Calculate weekly,bi-weekly,or monthly gross pay IF user_schedule == salary and user_tax_rate == Y
+    user_pay_type = input('What is your pay type? (H)ourly or (S)alary: ').title().strip()
+    user_pay_frequency = user_salary_pay_frequency = input('Are you paid (W)eekly, (B)i-weekly, or (M)onthly?: ').strip().title()
+    user_tax_rate = input('Do you know what your tax rate is? Y or N: ').strip().upper()
 
 
-if user_salary_pay_frequency == 'W' and user_tax == 'Y':
-
-    weekly_gross = (user_salary / 52).__round__(2)
-    weekly_net = (weekly_gross - (weekly_gross * user_tax_rate_converted)).__round__(2)
-
-    print("The results are based on information you have provided to me.")
-    print('Weekly Gross: ${}'.format(weekly_gross))
-    print('Weekly Net: ${}'.format(weekly_net))
-
-elif user_salary_pay_frequency == 'B' and user_tax == 'Y':
-
-    biWeekly_gross = (user_salary / 26).__round__(2)
-    biWeekly_net = (biWeekly_gross - (biWeekly_gross * user_tax_rate_converted)).__round__(2)
-
-    print("The results are based on information you have provided to me.")
-    print('Bi-Weekly Gross: ${}'.format(biWeekly_gross))
-    print('Bi-Weekly Net: ${}'.format(biWeekly_net))
-
-elif user_salary_pay_frequency == 'M' and user_tax == 'Y':
-    monthly_gross = (user_salary / 12).__round__(2)
-    monthly_net = (monthly_gross - (monthly_gross * user_tax_rate_converted)).__round__(2)
-
-    print("The results are based on information you have provided to me.")
-    print('Monthly Gross: ${}'.format(monthly_gross))
-    print('Monthly Net: ${}'.format(monthly_net))
-
-
-# Calculate gross pay IF user_schedule == hourly and user_tax_rate == Y
-
-
-# Calculate weekly,bi-weekly,or monthly gross pay IF user_schedule == salary and user_tax_rate == N
-
-# Calculate gross pay IF user_schedule == hourly and user_tax_rate == N
+# #user_tax_rate_float = float(input('Tax rate: ').strip())
+# #user_tax_rate_converted = (user_tax_rate_float / 100)
+#
+# #print('For me to figure out your tax rate, I will need information from your LAST paycheck.')
+#
+# # Calculate weekly,bi-weekly,or monthly gross pay IF user_schedule == salary and user_tax_rate == Y
+#
+#
+# if user_salary_pay_frequency == 'W' and user_tax == 'Y':
+#
+#     weekly_gross = (user_salary / 52).__round__(2)
+#     weekly_net = (weekly_gross - (weekly_gross * user_tax_rate_converted)).__round__(2)
+#
+#     print("The results are based on information you have provided to me.")
+#     print('Weekly Gross: ${}'.format(weekly_gross))
+#     print('Weekly Net: ${}'.format(weekly_net))
+#
+# elif user_salary_pay_frequency == 'B' and user_tax == 'Y':
+#
+#     biWeekly_gross = (user_salary / 26).__round__(2)
+#     biWeekly_net = (biWeekly_gross - (biWeekly_gross * user_tax_rate_converted)).__round__(2)
+#
+#     print("The results are based on information you have provided to me.")
+#     print('Bi-Weekly Gross: ${}'.format(biWeekly_gross))
+#     print('Bi-Weekly Net: ${}'.format(biWeekly_net))
+#
+# elif user_salary_pay_frequency == 'M' and user_tax == 'Y':
+#     monthly_gross = (user_salary / 12).__round__(2)
+#     monthly_net = (monthly_gross - (monthly_gross * user_tax_rate_converted)).__round__(2)
+#
+#     print("The results are based on information you have provided to me.")
+#     print('Monthly Gross: ${}'.format(monthly_gross))
+#     print('Monthly Net: ${}'.format(monthly_net))
+#
+# else:
+#     # print('Error! Please restart program.')
+# # Calculate gross pay IF user_schedule == hourly and user_tax_rate == Y
+#
+#
+# # Calculate weekly,bi-weekly,or monthly gross pay IF user_schedule == salary and user_tax_rate == N
+#
+# # Calculate gross pay IF user_schedule == hourly and user_tax_rate == N
