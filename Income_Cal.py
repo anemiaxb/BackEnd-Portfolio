@@ -1,5 +1,5 @@
 """
-Date: 3/20/2020
+Date: 3/21/2020
 Version: 3.7
 Owner: anemiaxb
 Author:
@@ -26,8 +26,14 @@ user_tax_rate = None
 
 while user_pay_type not in pay_type or user_pay_frequency not in frequency or user_tax_rate not in tax_rate:
     user_pay_type = input('What is your pay type? (H)ourly or (S)alary: ').strip().title()
-    user_pay_frequency = user_salary_pay_frequency = input('Are you paid (W)eekly, (B)i-weekly, or (M)onthly?: ').strip().title()
+    user_pay_frequency = input('Are you paid (W)eekly, (B)i-weekly, or (M)onthly?: ').strip().title()
+    user_ot_rate = float(input('What is your OT rate?: ').strip())
     user_tax_rate = input('Do you know what your tax rate is? Y or N: ').strip().title()
+
+# def h_w_y():
+#     hourly_rate = float(input('Hourly rate: $'))
+#     hours_worked =
+
 
 # #user_tax_rate_float = float(input('Tax rate: ').strip())
 # #user_tax_rate_converted = (user_tax_rate_float / 100)
