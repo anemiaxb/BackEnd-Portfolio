@@ -5,7 +5,6 @@ Owner: anemiaxb
 Author:
 Rationale:
 """
-
 """
 
 Cal's intro.
